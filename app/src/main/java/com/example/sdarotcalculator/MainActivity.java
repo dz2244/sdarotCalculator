@@ -1,4 +1,4 @@
-package com.example.sdarotcalculator.;
+package com.example.sdarotcalculator;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     EditText etMult, etFirst;
     Button btnNext;
 
-    int frstNum, multNum;
+    int firstNum, multNum;
     String temp;
     boolean isChecked;
 
