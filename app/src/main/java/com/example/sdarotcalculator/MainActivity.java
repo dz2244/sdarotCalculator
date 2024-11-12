@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 isChecked = typeSwich.isChecked();
 
                 Toast.makeText(this, "Valid", Toast.LENGTH_SHORT).show();
-                Intent si = new Intent(this,resultActivity.class);
+                Intent si = new Intent(this, MainActivity2.class);
                 si.putExtra("first", firstNum);
                 si.putExtra("mult", multNum);
                 si.putExtra("seriesChoice", isChecked);
