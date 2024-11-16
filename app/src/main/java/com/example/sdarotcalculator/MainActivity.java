@@ -1,5 +1,4 @@
 package com.example.sdarotcalculator;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -7,7 +6,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,8 +13,8 @@ public class MainActivity extends AppCompatActivity {
     EditText etMult, etFirst;
     Button btnNext;
 
-    int firstNum, multNum;
-    String temp;
+    double firstNum, d;
+    String temp,strFn,strMn;
     boolean isChecked;
 
     @Override
@@ -34,19 +32,17 @@ public class MainActivity extends AppCompatActivity {
         temp = etFirst.getText().toString();
         if (checkNum(temp))
         {
-            firstNum = Integer.parseInt(temp);
-
+            firstNum = Double.parseDouble(temp);
             temp = etMult.getText().toString();
+
             if (checkNum(temp))
             {
-                multNum = Integer.parseInt(temp);
-
+                d = Double.parseDouble(temp);
                 isChecked = typeSwich.isChecked();
 
-                Toast.makeText(this, "Valid", Toast.LENGTH_SHORT).show();
                 Intent si = new Intent(this, MainActivity2.class);
                 si.putExtra("first", firstNum);
-                si.putExtra("mult", multNum);
+                si.putExtra("d", d);
                 si.putExtra("seriesChoice", isChecked);
                 startActivity(si);
             }
@@ -57,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
     public boolean checkNum(String x)
     {
-        if (x.isEmpty()) return false;
+        if (x.isEmpty()||x.equals(".")||x.equals(",")||x.equals("+")||x.equals("-")||x.equals("-.")) return false;
         return true;
     }
 }

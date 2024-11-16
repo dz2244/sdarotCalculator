@@ -71,7 +71,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="Enter First Number"
-                android:inputType="number" />
+                android:inputType="number|numberDecimal|numberSigned" />
 
             <EditText
                 android:id="@+id/etMult"
@@ -80,7 +80,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint="Enter d"
-                android:inputType="number" />
+                android:inputType="number|numberDecimal|numberSigned" />
         </LinearLayout>
 
         <LinearLayout
