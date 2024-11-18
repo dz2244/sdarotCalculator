@@ -61,7 +61,7 @@ public class MainActivity2 extends AppCompatActivity implements AdapterView.OnIt
     }
 
     public String beautifulNum(double value){
-        if(value>100000||value<-100000){
+        if(value>1000000||value<-1000000){
             String scientificNotation = String.format("%.4e", value);
             String[] parts = scientificNotation.split("e");
             double base = Double.parseDouble(parts[0]) / 10.0;
@@ -88,7 +88,7 @@ public class MainActivity2 extends AppCompatActivity implements AdapterView.OnIt
         }
 
         tvIndex.setText("Item: " + (position+1));
-        if(sum>5000){
+        if(sum>1000000){
             tvSum.setText("Sum: " + beautifulNum(sum));
         }
         else {
