@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnNext;
 
     double firstNum, d;
-    String temp,strFn,strMn;
+    String temp;
     boolean isChecked;
 
     @Override
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
     public boolean checkNum(String x)
     {
-        if (x.isEmpty()||x.equals(".")||x.equals(",")||x.equals("+")||x.equals("-")||x.equals("-.")) return false;
+        if (x.isEmpty()||x.equals(".")||x.equals("+")||x.equals("-")||x.equals("-.")||x.equals("+.")) return false;
         return true;
     }
 }
